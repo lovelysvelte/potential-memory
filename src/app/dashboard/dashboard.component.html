@@ -1,0 +1,42 @@
+
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <i class="fab fa-accusoft"></i>
+      <a >Dashboard</a>
+    </div>
+    <ul class="navbar__menu">
+      <li style="cursor: pointer;" (click)="clk_logout()"><a>Logout</a></li>
+     
+    </ul>
+ 
+  </nav>
+  
+  <main>
+      <div  class="items">
+  <div *ngFor="let i of items$ | async" class="responsive">
+    <div class="gallery">
+      <a target="_blank" [href]="i.url">
+        <img [src]="i.thumbnailUrl" alt="Mountains" width="600" height="400">
+      </a>  
+      <div class="desc">{{i.title}}</div>
+    </div>
+  </div>
+</div>
+</main>
+
+
+ 
+<!-- <div class="items">
+    <div *ngFor="let item of items$ | async">
+        <b>ID: </b> {{item.id}}<br>
+        <b>Title: </b>{{item.title}}<br>
+        <img src="{{item.thumbnailUrl}}" alt="">
+        <br>
+        <br>
+        <br>
+    </div>
+</div> -->
+
+  
+
+
